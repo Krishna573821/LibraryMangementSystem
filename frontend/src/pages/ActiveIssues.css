@@ -1,0 +1,72 @@
+/* Container style */
+.activeissuesContainer {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading style */
+h2 {
+  color: orangered;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Paragraph for no issues */
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Table header styling */
+table th {
+  background-color: orangered;
+  color: white;
+  font-weight: bold;
+}
+
+/* Row hover effect */
+table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Odd rows for visual separation */
+table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* Styling for empty rows */
+table td[colspan="5"] {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  table th, table td {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import './AddUpdateUser.css';
 
 const AddUpdateUser = () => {
   const [formData, setFormData] = useState({
@@ -70,7 +71,7 @@ const AddUpdateUser = () => {
   };
 
   return (
-    <div>
+    <div className='addUpdateUserContainer'>
       <h2>{isNewUser ? 'Add New User' : 'Update User'}</h2>
       <form onSubmit={handleSubmit}>
         {/* Radio buttons to choose between new and existing user */}

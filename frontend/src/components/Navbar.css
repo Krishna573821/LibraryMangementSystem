@@ -1,66 +1,99 @@
-/* Navbar.css */
 .navbar {
-  background-color: #333;
-  padding: 10px;
-  color: white;
+  width: 100vw;
+  background-color: white;
+  padding: 10px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Navbar logo */
 .navbar-logo h1 {
-  margin: 0;
+  color: black;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
+/* Navbar menu */
 .navbar-menu {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
+  gap: 20px;
 }
 
+/* Navbar item */
 .navbar-item {
   position: relative;
-  margin: 0 20px;
 }
 
-.navbar-item a {
-  color: white;
+.navbar-item > a {
   text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
   padding: 10px;
   display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar-item a:hover {
-  background-color: #444;
+/* Hover effect for navbar items */
+.navbar-item > a:hover {
+  background-color: orangered;
+  color: white;
+  border-radius: 5px;
 }
 
+/* Submenu styles */
 .sub-menu {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #333;
-  display: none;
-  min-width: 200px;
-}
-
-.sub-menu li {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
+  border-radius: 5px;
+  min-width: 200px;
+  z-index: 1000;
 }
 
-.sub-menu li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-}
-
-.sub-menu li a:hover {
-  background-color: #555;
-}
-
+/* Show submenu on hover */
 .navbar-item:hover .sub-menu {
   display: block;
+}
+
+/* Submenu item styles */
+.sub-menu li {
+  padding: 8px 0;
+}
+
+/* Submenu link styling */
+.sub-menu li > a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  padding: 5px 15px;
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for submenu items */
+.sub-menu li > a:hover {
+  background-color: orangered;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .navbar-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .navbar-item > a {
+    padding: 10px 15px;
+  }
 }

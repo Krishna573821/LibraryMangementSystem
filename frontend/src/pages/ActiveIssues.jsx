@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { toast } from "react-toastify";
-
+import"./ActiveIssues.css"
 
 const ActiveIssues = () => {
   const [issues, setIssues] = useState([]);
@@ -39,7 +39,7 @@ const ActiveIssues = () => {
   };
 
   return (
-    <div style={{ maxWidth: 900, margin: 'auto', padding: 20 }}>
+    <div className='activeissuesContainer' style={{ maxWidth: 900, margin: 'auto', padding: 20 }}>
       <h2>Active Issued Books</h2>
       {issues.length === 0 ? (
         <p>No active issues found.</p>

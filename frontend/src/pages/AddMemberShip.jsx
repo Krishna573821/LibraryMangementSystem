@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import './AddMembership.css';
 
 const AddMembership = () => {
   const [users, setUsers] = useState([]);
@@ -93,10 +94,9 @@ const AddMembership = () => {
   
 
   return (
-    <div>
+    <div className='addMembershipContainer' >
       <h2>Add Membership</h2>
 
-      {/* Show list of users in a table */}
       <div>
         <h3>Select a User to Add Membership</h3>
         <table>

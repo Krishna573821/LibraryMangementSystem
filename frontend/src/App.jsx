@@ -24,31 +24,34 @@ import DashBoard from './pages/DashBoard';
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user'));
-  
+
     if (token && user) {
       setIsAuthenticated(true);
-  
       if (location.pathname === '/login' || location.pathname === '/') {
         navigate('/dashboard');
       }
-  
     } else {
       setIsAuthenticated(false);
       if (location.pathname !== '/login') {
         navigate('/login');
       }
     }
-  }, []); 
+
+    setLoading(false); 
+  }, [location.pathname, navigate]);
+
    
 
   return (
     <>
+      
       {isAuthenticated && <Navbar />}
 
       <Routes>

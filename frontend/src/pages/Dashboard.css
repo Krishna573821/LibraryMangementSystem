@@ -1,0 +1,82 @@
+.admin-dashboard {
+  background-color: #fff;
+  width: 100%;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading styles */
+.admin-dashboard h1 {
+  color: orangered;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Admin dashboard content */
+.admin-dashboard-content {
+  margin-top: 30px;
+  text-align: left;
+}
+
+/* Welcome heading */
+.admin-dashboard-content h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Books List heading */
+.admin-dashboard-content h3 {
+  color: orangered;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Header styles for table */
+table th {
+  background-color: orangered;
+  color: white;
+  font-weight: bold;
+}
+
+/* Row hover effect */
+table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Empty state when no books found */
+table td[colspan="6"] {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+}
+
+/* Optional table styling */
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  table th, table td {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

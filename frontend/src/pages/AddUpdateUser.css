@@ -1,0 +1,104 @@
+/* Container for the form */
+.addUpdateUserContainer {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading style */
+.addUpdateUserContainer h2 {
+  color: orangered;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form group styling */
+div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Label styling */
+label {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: orangered;
+}
+
+/* Radio button and checkbox styling */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Button styling */
+button {
+  padding: 12px;
+  background-color: orangered;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e75a2a;
+}
+
+/* Styling for when user is new or existing */
+div > div {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+div > div input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Checkbox styles */
+div > div label {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  div {
+    padding: 20px;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  button {
+    font-size: 0.9rem;
+  }
+}
